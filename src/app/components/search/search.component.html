@@ -1,0 +1,7 @@
+<form [formGroup]= "searchFormGroup" (ngSubmit)="searchAnime();">
+  <input
+    matInput
+    formControlName="anime"
+  />
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>

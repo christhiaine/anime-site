@@ -26,9 +26,14 @@ export class JikanService {
   // getAnime(): Observable<any> {
   //   return this.http.get(`${this.url}/top/anime/1/tv`)
   // }
+  // https://api.jikan.moe/v3/search/anime?q=naruto
 
   getTopAnime(): Observable<any> {
     return this.http.get<any>(`${this.url}/top/anime/1/tv`)
+  }
+
+  searchAnime(query:string): Observable<any> {
+    return this.http.get<any>(`${this.url}/search/anime?q=${query}`)
   }
 
   // getAnime2(): Observable<any> {

@@ -1,15 +1,16 @@
 <mat-toolbar color="primary">
   <span>AnimeHub</span>
-  <div fxHide.lt-md>
+  <app-search></app-search>
+  <div fxHide.lt-md >
     <span class="column-label">Columns</span>
     <mat-slider [max]="6" [min]="3" [(ngModel)]="gridColumns" [thumbLabel]="true">
     </mat-slider>
   </div>
 </mat-toolbar>
 
-<div>
+<!-- <div>
   <app-carousel></app-carousel>
-</div>
+</div> -->
 
 <div class="content" *ngIf = "!isLoading">
   <div fxLayout="row wrap" fxLayoutGap="16px grid">

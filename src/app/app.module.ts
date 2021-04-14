@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule} from '@angular/material/card';
@@ -17,7 +17,7 @@ import { FilterComponent } from './components/filter/filter.component';
 import { SearchComponent } from './components/search/search.component';
 import { JikanService } from './services/jikan/jikan-service.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CarouselComponent } from './components/carousel/carousel.component';
+// import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,6 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     NavbarComponent,
     FilterComponent,
     SearchComponent,
-    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +38,10 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     MatButtonModule,
     MatToolbarModule,
     MatSliderModule,
+    ReactiveFormsModule,
     NgbModule,
   ],
   providers: [JikanService],
-  bootstrap: [AppComponent, CarouselComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
